@@ -1,7 +1,7 @@
 > Создайте скрипт sleeper.sh, который будет 10 раз с интервалом в 5 секунд
 писать дату в формате HH:MM:SS и количество процессов одним числом 
 
-// Сначала хотела через top, потом разобралась - правильно date\n ps -ef | wc -l - но почему-то в 1 строку не получается? Что не так? 
+// Сначала хотела через top, потом разобралась - правильно date ps -ef | wc -l - но почему-то в 1 строку не получается? Что не так? 
 
 
 ssh -i ~/.ssh/id_rsa ec2-user@linux.telran-edu.de
@@ -10,16 +10,13 @@ ls
 
 1 nano script.sh
 2 #!/bin/bash
-echo Hello
-date
-uptime
 
 for run in {1..10}
 
 do
 
 echo $run
-date\n ps -ef | wc -l
+date ps -ef | wc -l
 
 sleep 5
 
